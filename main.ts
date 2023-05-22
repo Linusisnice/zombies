@@ -1,3 +1,4 @@
+tiles.setCurrentTilemap(tilemap`level1`)
 let Hero = sprites.create(img`
     . . . . . . f f f f . . . . . . 
     . . . . f f f 2 2 f f f . . . . 
@@ -16,8 +17,8 @@ let Hero = sprites.create(img`
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Player)
-controller.moveSprite(Hero)
 scene.cameraFollowSprite(Hero)
+controller.moveSprite(Hero)
 forever(function () {
     if (controller.right.isPressed()) {
         Hero.setImage(img`
