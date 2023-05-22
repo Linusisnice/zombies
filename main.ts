@@ -1,8 +1,29 @@
 namespace SpriteKind {
     export const Door = SpriteKind.create()
+    export const wall = SpriteKind.create()
 }
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . f f f . . . . . . . . . . . . 
+        . f f f f f f f f f f f f f f . 
+        . f f f f f f f f f f f f f . . 
+        . f f f f f f f f f f f f . . . 
+        . f f f f f f f f f f f f . . . 
+        . . f f f f f . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, Hero, -55, 50)
+})
 function doSomething () {
-    tiles.placeOnTile(Hero, tiles.getTileLocation(1, 1))
+    tiles.placeOnTile(Hero, tiles.getTileLocation(38, 1))
     Hero.setImage(img`
         . . . . . . . . . . . . . . . . 
         . . . . . f f f f f f . . . . . 
@@ -21,10 +42,6 @@ function doSomething () {
         . . . f f f f f f f f f f . . . 
         . . . . f f . . . f f f . . . . 
         `)
-    for (let index = 0; index < 30; index++) {
-        pause(100)
-        Hero.x += 1
-    }
     controller.moveSprite(Hero)
     Hero.setImage(img`
         . . . . . . f f f f . . . . . . 
@@ -44,7 +61,9 @@ function doSomething () {
         . . . . . f f f f f f . . . . . 
         . . . . . f f . . f f . . . . . 
         `)
+    Hero.sayText("Hello and welcome to bozo")
 }
+let projectile: Sprite = null
 let Hero: Sprite = null
 tiles.setCurrentTilemap(tilemap`level1`)
 Hero = sprites.create(img`
@@ -83,7 +102,83 @@ let Door = sprites.create(img`
     f e e e e e e e e e e e d e e f 
     f e e e e e e e e e e e e e e f 
     `, SpriteKind.Door)
+let wall = sprites.create(img`
+    4 4 2 4 4 4 f 4 4 4 4 4 2 f 4 2 
+    4 2 4 4 2 4 f 4 2 4 4 4 4 f 4 4 
+    4 4 4 4 4 4 f 4 4 4 4 4 2 f 2 4 
+    f f f f f f f f f f f f f f f f 
+    4 4 4 2 f 4 2 4 4 4 2 f 4 4 4 2 
+    4 2 4 4 f 4 4 4 4 4 4 f 4 2 4 4 
+    4 4 4 2 f 4 4 4 2 4 4 f 4 4 4 4 
+    f f f f f f f f f f f f f f f f 
+    4 4 f 2 4 4 4 4 4 f 2 4 4 4 4 4 
+    4 2 f 4 4 4 2 4 4 f 4 4 2 4 4 4 
+    2 4 f 2 4 4 4 4 4 f 4 4 4 4 4 2 
+    f f f f f f f f f f f f f f f f 
+    4 4 2 4 4 f 2 4 4 4 4 2 f 4 4 2 
+    4 4 4 4 4 f 4 4 4 2 4 4 f 4 4 4 
+    2 4 4 4 2 f 4 4 4 4 4 4 f 2 4 4 
+    f f f f f f f f f f f f f f f f 
+    `, SpriteKind.wall)
+let wall2 = sprites.create(img`
+    4 4 2 4 4 4 f 4 4 4 4 4 2 f 4 2 
+    4 2 4 4 2 4 f 4 2 4 4 4 4 f 4 4 
+    4 4 4 4 4 4 f 4 4 4 4 4 2 f 2 4 
+    f f f f f f f f f f f f f f f f 
+    4 4 4 2 f 4 2 4 4 4 2 f 4 4 4 2 
+    4 2 4 4 f 4 4 4 4 4 4 f 4 2 4 4 
+    4 4 4 2 f 4 4 4 2 4 4 f 4 4 4 4 
+    f f f f f f f f f f f f f f f f 
+    4 4 f 2 4 4 4 4 4 f 2 4 4 4 4 4 
+    4 2 f 4 4 4 2 4 4 f 4 4 2 4 4 4 
+    2 4 f 2 4 4 4 4 4 f 4 4 4 4 4 2 
+    f f f f f f f f f f f f f f f f 
+    4 4 2 4 4 f 2 4 4 4 4 2 f 4 4 2 
+    4 4 4 4 4 f 4 4 4 2 4 4 f 4 4 4 
+    2 4 4 4 2 f 4 4 4 4 4 4 f 2 4 4 
+    f f f f f f f f f f f f f f f f 
+    `, SpriteKind.wall)
+let wall3 = sprites.create(img`
+    4 4 2 4 4 4 f 4 4 4 4 4 2 f 4 2 
+    4 2 4 4 2 4 f 4 2 4 4 4 4 f 4 4 
+    4 4 4 4 4 4 f 4 4 4 4 4 2 f 2 4 
+    f f f f f f f f f f f f f f f f 
+    4 4 4 2 f 4 2 4 4 4 2 f 4 4 4 2 
+    4 2 4 4 f 4 4 4 4 4 4 f 4 2 4 4 
+    4 4 4 2 f 4 4 4 2 4 4 f 4 4 4 4 
+    f f f f f f f f f f f f f f f f 
+    4 4 f 2 4 4 4 4 4 f 2 4 4 4 4 4 
+    4 2 f 4 4 4 2 4 4 f 4 4 2 4 4 4 
+    2 4 f 2 4 4 4 4 4 f 4 4 4 4 4 2 
+    f f f f f f f f f f f f f f f f 
+    4 4 2 4 4 f 2 4 4 4 4 2 f 4 4 2 
+    4 4 4 4 4 f 4 4 4 2 4 4 f 4 4 4 
+    2 4 4 4 2 f 4 4 4 4 4 4 f 2 4 4 
+    f f f f f f f f f f f f f f f f 
+    `, SpriteKind.wall)
+let wall4 = sprites.create(img`
+    4 4 2 4 4 4 f 4 4 4 4 4 2 f 4 2 
+    4 2 4 4 2 4 f 4 2 4 4 4 4 f 4 4 
+    4 4 4 4 4 4 f 4 4 4 4 4 2 f 2 4 
+    f f f f f f f f f f f f f f f f 
+    4 4 4 2 f 4 2 4 4 4 2 f 4 4 4 2 
+    4 2 4 4 f 4 4 4 4 4 4 f 4 2 4 4 
+    4 4 4 2 f 4 4 4 2 4 4 f 4 4 4 4 
+    f f f f f f f f f f f f f f f f 
+    4 4 f 2 4 4 4 4 4 f 2 4 4 4 4 4 
+    4 2 f 4 4 4 2 4 4 f 4 4 2 4 4 4 
+    2 4 f 2 4 4 4 4 4 f 4 4 4 4 4 2 
+    f f f f f f f f f f f f f f f f 
+    4 4 2 4 4 f 2 4 4 4 4 2 f 4 4 2 
+    4 4 4 4 4 f 4 4 4 2 4 4 f 4 4 4 
+    2 4 4 4 2 f 4 4 4 4 4 4 f 2 4 4 
+    f f f f f f f f f f f f f f f f 
+    `, SpriteKind.wall)
+tiles.placeOnTile(wall4, tiles.getTileLocation(38, 0))
 tiles.placeOnTile(Door, tiles.getTileLocation(38, 4))
+tiles.placeOnTile(wall, tiles.getTileLocation(38, 3))
+tiles.placeOnTile(wall2, tiles.getTileLocation(38, 2))
+tiles.placeOnTile(wall3, tiles.getTileLocation(38, 1))
 scene.cameraFollowSprite(Hero)
 doSomething()
 forever(function () {
