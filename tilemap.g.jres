@@ -10,6 +10,12 @@
         "tilemapTile": true,
         "displayName": "myTile"
     },
+    "tile2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile0"
+    },
     "level1": {
         "id": "level1",
         "mimeType": "application/mkcd-tilemap",
@@ -17,7 +23,8 @@
         "tileset": [
             "myTiles.transparency16",
             "sprites.builtin.brick",
-            "myTiles.tile1"
+            "myTiles.tile1",
+            "myTiles.tile2"
         ],
         "displayName": "level1"
     },
