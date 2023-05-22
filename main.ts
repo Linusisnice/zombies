@@ -1,3 +1,6 @@
+namespace SpriteKind {
+    export const Door = SpriteKind.create()
+}
 function doSomething () {
     tiles.placeOnTile(Hero, tiles.getTileLocation(1, 1))
     Hero.setImage(img`
@@ -62,6 +65,25 @@ Hero = sprites.create(img`
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Player)
+let Door = sprites.create(img`
+    f f f f f f f f f f f f f f f f 
+    f f f f e e e e e e e e f f f f 
+    f f f e e e e e e e e e e f f f 
+    f f e d e e e e e e e e d e f f 
+    f e d d d e e e e e e d d d e f 
+    f e e d e e e e e e e e d e e f 
+    f e e e e e e e e e e e e e e f 
+    f e e e e e e e e e e e e e e f 
+    f e e e e e e e e e e e e e e f 
+    f e e d d d d d d d d d d d d f 
+    f e e d f d d d d d d d d d d f 
+    f e e d f d e e e e e e e e e f 
+    f e e e d e e e e e e e d e e f 
+    f e e e e e e e e e e d d d e f 
+    f e e e e e e e e e e e d e e f 
+    f e e e e e e e e e e e e e e f 
+    `, SpriteKind.Door)
+tiles.placeOnTile(Door, tiles.getTileLocation(38, 4))
 scene.cameraFollowSprite(Hero)
 doSomething()
 forever(function () {
