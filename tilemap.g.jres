@@ -64,23 +64,11 @@
         "tilemapTile": true,
         "displayName": "myTile2"
     },
-    "tile7": {
-        "data": "hwQQABAAAADd3d3d3d3dPR3RER3RER3RHdERHdERHdEd0REd0REd0R3RER3RER3R3d3d3d3d3d0d0REd0REd0R3RER3RER3RHdERHdERHdEd0REd0REd0d3d3d3d3d3dHdERHdERHdEd0REd0REd0R3RER3RER3RHdERHdERHdHd3d3d3d3dPQ==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "myTile5"
-    },
     "tile8": {
         "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
         "displayName": "myTile6"
-    },
-    "tile9": {
-        "data": "hwQQABAAAADT3d3d3d3d3R3RER3RER3RHdERHdERHdEd0REd0REd0R3RER3RER3R3d3d3d3d3d0d0REd0REd0R3RER3RER3RHdERHdERHdEd0REd0REd0d3d3d3d3d3dHdERHdERHdEd0REd0REd0R3RER3RER3RHdERHdERHdHT3d3d3d3d3Q==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "myTile7"
     },
     "level2": {
         "id": "level2",

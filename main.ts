@@ -29,7 +29,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             . . . . . . . . . . . . . . . . 
             `, Hero, 50, 50)
         projectile2.setVelocity(Render.getAttribute(Render.attribute.dirX) * 100, Render.getAttribute(Render.attribute.dirY) * 100)
-        music.play(music.melodyPlayable(music.pewPew), music.PlaybackMode.UntilDone)
+        
         for (let index = 0; index < 4; index++) {
             animation.runImageAnimation(
             guns,
