@@ -149,9 +149,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.ammo, function (sprite, otherSprite) {
     info.changeScoreBy(30)
     sprites.destroy(ammo2)
-})
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    Render.jumpWithHeightAndDuration(Render.getRenderSpriteInstance(), 100, 500)
+
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Projectile, function (sprite, otherSprite) {
 	
