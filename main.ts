@@ -1641,32 +1641,7 @@ let Door2 = sprites.create(img`
     f e e e e e e e e e e e d e e f 
     f e e e e e e e e e e e e e e f 
     `, SpriteKind.Door)
-<<<<<<< HEAD
-let Door2 = sprites.create(img`
-    f f f f f f f f f f f f f f f f 
-    f f f f e e e e e e e e f f f f 
-    f f f e e e e e e e e e e f f f 
-    f f e d e e e e e e e e d e f f 
-    f e d d d e e e e e e d d d e f 
-    f e e d e e e e e e e e d e e f 
-    f e e e e e e e e e e e e e e f 
-    f e e e e e e e e e e e e e e f 
-    f e e e e e e e e e e e e e e f 
-    f e e d d d d d d d d d d d d f 
-    f e e d f d d d d d d d d d d f 
-    f e e d f d e e e e e e e e e f 
-    f e e e d e e e e e e e d e e f 
-    f e e e e e e e e e e d d d e f 
-    f e e e e e e e e e e e d e e f 
-    f e e e e e e e e e e e e e e f 
-    `, SpriteKind.Door)
-let wall = sprites.create(img`
-    4 4 2 4 4 4 f 4 4 4 4 4 2 f 4 2 
-    4 2 4 4 2 4 f 4 2 4 4 4 4 f 4 4 
-    4 4 4 4 4 4 f 4 4 4 4 4 2 f 2 4 
-=======
 let Door22 = sprites.create(img`
->>>>>>> df66c22 (Update pxt.json, main.blocks, main.ts, tilemap.g.jres, tilemap.g.ts)
     f f f f f f f f f f f f f f f f 
     f f f f e e e e e e e e f f f f 
     f f f e e e e e e e e e e f f f 
@@ -1776,16 +1751,9 @@ ammo2 = sprites.create(img`
     . f 5 f . f 5 5 5 f . f 5 f . . 
     `, SpriteKind.ammo)
 tiles.placeOnTile(wall4, tiles.getTileLocation(38, 0))
-<<<<<<< HEAD
-tiles.placeOnTile(Door, tiles.getTileLocation(38, 4))
-tiles.placeOnTile(Door2, tiles.getTileLocation(36, 12))
-tiles.placeOnTile(wall, tiles.getTileLocation(38, 3))
-tiles.placeOnTile(wall2, tiles.getTileLocation(38, 2))
-=======
 tiles.placeOnTile(ammo2, tiles.getTileLocation(34, 6))
 tiles.placeOnTile(wall2, tiles.getTileLocation(38, 3))
 tiles.placeOnTile(wall22, tiles.getTileLocation(38, 2))
->>>>>>> df66c22 (Update pxt.json, main.blocks, main.ts, tilemap.g.jres, tilemap.g.ts)
 tiles.placeOnTile(wall3, tiles.getTileLocation(38, 1))
 Hero = Render.getRenderSpriteVariable()
 forever(function () {
